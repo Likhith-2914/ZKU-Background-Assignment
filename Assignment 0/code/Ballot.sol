@@ -49,7 +49,8 @@ contract Ballot {
             }));
         }
     }
-
+    
+    //modifier that checks the timelimit
     modifier voteEnded {
         uint256 minute = 60;
         require(block.timestamp <= startTime + 5 * minute);
